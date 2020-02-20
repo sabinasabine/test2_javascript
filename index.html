@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Halant&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <div id="wrap-chat" class="wrap-chat">
+      <h3>Чат-бот</h3>
+
+      <div class="chat">
+        <div id="chat-message"></div>
+        <div class="bottom">
+          <div class="dots-wrap">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+          </div>
+          <form class="form">
+            <input type="text" id="input-text" required />
+            <button type="submit" id="btn">
+              <svg
+                class="svgBtn"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  class="svgPath"
+                  d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"
+                  fill="#929292"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>

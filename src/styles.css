@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Halant";
+}
+:root {
+  --yellow: #f9c35b;
+  --white: #ffffff;
+  --black: #282828;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+}
+h3 {
+  color: var(--white);
+  margin: 2vh 2vw;
+}
+.wrap-chat {
+  background-color: var(--black);
+  width: 60%;
+  max-width: 700px;
+}
+.chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--white);
+  border-radius: 20px;
+  height: 60vh;
+  max-height: 500px;
+  z-index: 2;
+  position: relative;
+}
+#chat-message {
+  overflow-y: scroll;
+  padding-left: 2vw;
+}
+#chat-message::-webkit-scrollbar {
+  display: none;
+}
+#chat-message {
+  -ms-overflow-style: none;
+}
+
+.message {
+  display: flex;
+  margin-top: 15px;
+  word-break: break-all;
+}
+.avatar {
+  height: 35px;
+  min-width: 35px;
+  border-radius: 50%;
+  display: block;
+  margin-right: 1vw;
+  background-color: var(--white);
+}
+.bot .avatar {
+  background: url(../img/BotAvatar.svg) no-repeat;
+  background-size: cover;
+}
+.user .avatar {
+  background: url(../img/UserAvatar.svg) no-repeat;
+  background-size: cover;
+}
+
+.text-message {
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+.bot .text-message {
+  background-color: var(--yellow);
+}
+.user .text-message {
+  background-color: var(--white);
+}
+
+.dots-wrap {
+  display: none;
+  justify-content: space-between;
+  width: 30px;
+  margin: 5px 10px;
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--yellow);
+}
+.dot-1 {
+  animation: flow 0.8s ease 0s infinite alternate;
+}
+.dot-2 {
+  animation: flow 0.8s ease 0.4s infinite alternate;
+}
+.dot-3 {
+  animation: flow 0.8s ease 0.8s infinite alternate;
+}
+
+@keyframes flow {
+  from {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  to {
+    opacity: 0.2;
+    transform: scale(0.75);
+  }
+}
+
+.form {
+  flex: 0 0 auto;
+  margin: 20px 10px;
+}
+input {
+  width: 100%;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  padding: 8px 25px;
+}
+#btn {
+  position: absolute;
+  right: 0;
+  margin: 5px 15px;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+#btn svg {
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+@media (max-width: 560px) {
+  .wrap-chat {
+    min-height: 100vh;
+    width: 100vw;
+  }
+  .chat {
+    border: none;
+  }
+  .form {
+    flex: 0 0 auto;
+    background-color: var(--white);
+    width: 100%;
+    margin: 0 0;
+  }
+}
